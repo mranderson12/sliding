@@ -1,0 +1,56 @@
+*{
+margin:0;
+padding:0;
+}
+
+body
+{
+background:#666;
+}
+#container
+{
+width:480px;
+height:360px;
+margin:50px auto 0 auto;
+border:3px solid #fff;
+position:relative;
+overflow:hidden;
+}
+.images
+{
+width:480px;
+height:360px;
+position:relative;
+z-index:1;
+} 
+
+
+#container a.arrow
+{
+width:45px;
+height:50px;
+position:absolute;
+top:145px;
+text-indent:-50000em;
+background:red;
+z-index:2;
+left:0;
+display:block;
+}
+#container a.arrow.right
+{
+
+left:436px;
+
+background-image:url("C:/my projects/website practice/chase/sliding jquery/next.jpg");
+}
+#container a.arrow.left
+{
+background-image:url("C:/my projects/website practice/chase/sliding jquery/previous.jpg");
+}
+.images .imageholder{width:480px; float:left; height:360px;position:relative;}
+#container .images .imageholder span{z-index:4;position:absolute;color:#fff;}
+#container .images .imageholder img{width:480px;height:360px;position:absolute;display:block;top:0;left:0;z-index:3;}
+
+
+

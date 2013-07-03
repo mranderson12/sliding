@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Sliding images</title>
+<link rel="stylesheet" type="text/css" href="slide.css"/>
+<!--script type="text/javascript" src="slide.js"></script-->
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+           $('#container > a.arrow.left').click(function(e){
+		   e.preventDefault;
+		   var rotate =$('#container .images');
+rotate.children('.imageholder').first().animate({marginLeft:"-=480px"},
+function(){
+           $(this).appendTo(rotate).removeAttr("style");
+		   });
+		 });
+	$('#container > a.arrow.right').click(function(e){
+		   e.preventDefault;
+		   var rotate =$('#container .images');
+rotate.children('.imageholder').last().prependTo(rotate).removeAttr("style").css("margin-left","-480px").animate({marginLeft:"0"});
+});
+});
+	</script>
+</head>
+<body>
+<div id="container">
+     <a href="#" class="arrow left"></a>
+      <div class="images">
+	       <div class="imageholder">
+		        <span>Image 1</span>
+		               <img src="green-img.jpg" alt="" height="360" width="480"></div>
+			<div class="imageholder">
+		        <span>Image 2</span>
+		               <img src="bottle-img.jpg" alt="" height="360" width="480"></div>
+			<div class="imageholder">
+		        <span>Image 3</span>
+		               <img src="mickey-img.jpg" alt="" height="360" width="480"></div>
+			<div class="imageholder">
+		        <span>Image 4</span>
+		               <img src="night-img.jpg" alt="" height="360" width="480"></div>
+			<div class="imageholder">
+		        <span>Image 5</span>
+		               <img src="nature-img.jpg" alt="" height="360" width="480"></div>
+					   
+	    </div>   
+	   
+<a href="#" class="arrow right"></a>
+</div>	
+
+</body>
+</html>
